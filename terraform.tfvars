@@ -1,7 +1,7 @@
 # Copy this file to terraform.tfvars and adjust values for your environment.
 # terraform.tfvars is typically gitignored since it may contain env-specific settings.
 
-aws_region   = "us-east-1"
+aws_region   = "ap-south-1"
 project_name = "threetier-app"
 environment  = "dev"
 
