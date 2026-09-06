@@ -12,16 +12,16 @@ terraform {
     }
   }
 
-  # Remote state backend - uncomment and configure after creating
+  # Remote state backend
   # the S3 bucket + DynamoDB table (see README for bootstrap steps)
-  #
-  # backend "s3" {
-  #   bucket         = "my-terraform-state-bucket"
-  #   key            = "3tier-app/terraform.tfstate"
-  #   region         = "us-east-1"
-  #   dynamodb_table = "terraform-locks"
-  #   encrypt        = true
-  # }
+  
+  backend "s3" {
+     bucket         = "my-terraform-state-bucket"
+     key            = "3tier-app/terraform.tfstate"
+     region         = "ap-south-1"
+     dynamodb_table = "terraform-locks"
+     encrypt        = true
+   }
 }
 
 provider "aws" {
